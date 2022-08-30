@@ -7,11 +7,9 @@ namespace TestApi.Controllers
     [Route("api/[controller]")]
     public class TestController : ControllerBase
     {
-        private readonly ITestService _testService; 
         private readonly ILocalizerExtension _lang;
-        public TestController(ITestService testService, ILocalizerExtension lang)
+        public TestController(ILocalizerExtension lang)
         {
-            this._testService = testService;
             this._lang = lang;
         }
         [ProducesResponseType(200)]
